@@ -1,0 +1,44 @@
+Given a number n find the number of prime numbers less than equal to that number.
+Input
+There is only one integer containing value of n.
+
+Constraints:-
+1 <= n <= 10000000
+
+
+
+code====
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+            Scanner scn = new Scanner(System.in);
+            int n = scn.nextInt();
+            
+            int count = 0;
+            int numToCheck = 2;
+
+            while (numToCheck <= n) {
+                boolean isPrime = true;
+                int val = 2;
+                while (val * val <= numToCheck) {
+                    if(numToCheck % val == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    val = val + 1;
+                }
+                if(isPrime == true) {
+                    count = count + 1;
+                }
+                numToCheck = numToCheck + 1;
+            }
+            System.out.println(count);
+
+	}
+}
