@@ -1,0 +1,42 @@
+Our five power rangers have powers P1, P2, P3, P4, and P5.
+To ensure the proper distribution of power, the power of every power ranger must remain less than the sum of powers of other power rangers.
+If the above condition is not met, there's an emergency. Can you let us know if there's an emergency?
+Input
+The first and the only line of input contains 5 integers P1, P2, P3, P4, and P5.
+
+
+Constraints
+0 <= P1, P2, P3, P4, P5 <= 100
+
+
+
+code=====
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+					  Scanner scan = new Scanner(System.in);
+					  int[] arr = new int[5];
+					  int sum = 0;
+					  int count = 0;
+					  for (int i =0; i < 5; i++){
+						  arr[i] = scan.nextInt();
+						  sum = sum + arr[i];
+					  }
+					  for(int j = 0; j < 5; j++){
+						  if (arr[j] >=(Math.abs(arr[j] - sum))){
+							  System.out.println("SPD Emergency");
+							  count = 1;
+							  break;
+						  }
+					  }
+					  if (count == 0){
+						  System.out.println("Stable");
+					  }
+	}
+}
