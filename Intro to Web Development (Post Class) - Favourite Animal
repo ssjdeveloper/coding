@@ -1,0 +1,20 @@
+Favourite Animal
+Are you a dog person or a cat person? If neither, do you like Pandas or Elephants? Show us what your favourite animal through an image
+
+Acceptance Criteria:
+- Display an image of your favourite animal on the page using img tags
+- Also add an alt attribute to the img tag
+
+code====
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzaraU3F1NFJlRuT43mlJrpnXUvqMa6isr-kWfF6FcdcKcLQZ_s0rg_WKijIq1OzMi4OQ&usqp=CAU" alt="this is animal">
+
+
+
+text passed===
+
+Testcases
+img tag should have a alt attribute with sensible text.
+img tag should have a valid src location.
+img tag should have src defined.
+Atleast on image tag should be rendered.
