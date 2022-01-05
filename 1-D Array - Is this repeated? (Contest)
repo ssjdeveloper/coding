@@ -1,0 +1,42 @@
+Is this repeated? (Contest)
+
+standard input/output: 2s/128000 kB
+
+Given an array A of N integers, find whether there exists three consecutive same integers in the array.
+Input
+The first line of the input contains an integer N.
+The second line contains N space separated integers of the array A.
+
+Constraints
+3 <= N <= 1000
+1 <= A[i] <= 100
+
+
+
+
+code====
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+		 Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int [n];
+
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+	    for(int i=0;i<n-2;i++){
+			if(arr[i]==arr[i+1] && arr[i+1]==arr[i+2]){
+				System.out.print("Yes");
+				return;
+			}
+		}
+		System.out.print("No");
+	}
+}
