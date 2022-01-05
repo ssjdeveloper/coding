@@ -1,0 +1,48 @@
+Basic Calculator
+
+
+
+Calculators are widely used devices nowadays. It makes calculations easier and faster. A simple calculator consists of the following operators:
+1. '+': adding two numbers
+2. '- ': subtraction
+3. '*': multiplying numbers
+4. '/': division
+
+You will be given operator '+' or '- ' or '*' or '/' followed by two operands(integers), you need to perform a mathematical operation based on a given operator.
+
+If '/' operator is used, return the integer value after division
+Input
+User task:
+Since this is a functional problem you don't have to worry about the input. You just have to complete the function calculator() which contains operator(any one of given in the constraints), and two operands i.e. two integers.
+
+Constraints:
+operators - {+, - , *, /}
+1 <= integers <= 10^4
+
+
+
+
+code===
+
+static int calculator(char ch, int a, int b)
+    {
+         // your code here
+         int i=0;
+         switch(ch)
+         {
+           case '/':
+              i=a/b;
+              break;
+            case '*':
+              i=a*b;
+               break;
+            case '+':
+             i=a+b;
+              break;
+            case '-':
+            i=a-b;
+              break;
+
+         }
+         return(i);
+     }
