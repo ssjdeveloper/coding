@@ -1,0 +1,42 @@
+DSA Practice Questions - Pattern making (debugging)by Satendra
+Run
+Save and Run Hidden Test Cases
+Pattern making (debugging)
+
+standard input/output: 2s/128000 kB
+
+Given an integer n, your task is to print the pattern as shown in example:-
+For n=5, the pattern is:
+1
+1 2 1
+1 2 3 2 1
+1 2 3 4 3 2 1
+1 2 3 4 5 4 3 2 1
+1 2 3 4 3 2 1
+1 2 3 2 1
+1 2 1
+1
+Input
+User Task:
+Since this will be a functional problem, you don't have to take input. You just have to complete the function pattern_making() that takes the integer n as parameter.
+
+Constraints:-
+1 <= n <= 100
+
+
+
+code===
+
+public static void pattern_making(int n){
+    int t,i,m;
+    for(i=1-n;i<n;i++)
+    {
+        m=n-Math.abs(i);
+        for(t=1;t<=m;t++)
+          System.out.print(t+" ");
+        for(t=m-1;t>0;t--)
+          System.out.print(t+" ");
+          System.out.println();
+    }
+          
+}
