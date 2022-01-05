@@ -1,0 +1,52 @@
+Replace element
+
+standard input/output: 2s/128000 kB
+
+Given an array of N elements, your task is to update every element with multiplication of previous and next elements with following exceptions:-
+a) First element is replaced by multiplication of first and second.
+b) Last element is replaced by multiplication of last and second last.
+
+See example for more clarity
+Input
+First line of input contains the size of array N, next line contains N space separated integers denoting values of array.
+
+Constraints:-
+2 < = N < = 100000
+1 < = arr[i] < = 100000
+
+
+
+code=======
+
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+void CallArray(int arr[],int n){
+	int prev=arr[0];
+	arr[0]=arr[0]*arr[1];
+
+	for(int i=1;i<n-1;i++){
+		int curr=arr[i];
+		arr[i]=prev*arr[i+1];
+		prev=curr;
+	}
+	arr[n-1]=prev*arr[n-1];
+}
+
+int main() {
+
+	// Your code here
+	int n;
+	cin>>n;
+
+	int arr[n];
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
+	}
+
+	CallArray(arr,n);
+	for(int i=0;i<n;i++){
+		cout<<arr[i]<<" ";
+	}
+	return 0;
+}
