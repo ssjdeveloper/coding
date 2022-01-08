@@ -1,0 +1,50 @@
+Chocolaty Problem
+
+standard input/output: 1s/128000 kB
+
+Piyush has N chocolates in his extremely huge bag. He wants to buy some chocolates (maybe 0) so that the total number of chocolates he has in his bag can never be fairly divided into piles.
+A division is considered fair if there are at least 2 piles and each pile has more than 1 chocolate. Moreover, each pile should contain an equal number of chocolates.
+
+You need to help Piyush find the minimum number of chocolates he needs to buy.
+Input
+The first and the only line of input contains N, the total number of chocolates Piyush has in his bag currently.
+
+
+Constraints
+2 ≤ N ≤ 1000000000
+Output
+The output should contain only one integer, the minimum number of chocolates Piyush needs to buy so that the total number of chocolates can never be fairly divided.
+
+
+
+code=======
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+		Scanner inputTaker = new Scanner(System.in);
+		int n = inputTaker.nextInt();
+		int prime = n;
+		while(true){
+			if(isPrime(prime)){
+				break;
+			}else{
+				prime++;
+			}
+		}
+		System.out.println(prime-n);
+	}
+	public static boolean isPrime(int n){
+		for(int i = 2; i<=Math.sqrt(n); i++){
+			if(n%i == 0){
+				return false;
+			}
+		}
+		return true;
+	}
+}
