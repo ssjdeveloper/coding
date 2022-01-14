@@ -14,6 +14,26 @@ Output
 Output a single integer, the answer to the problem.
 
 
+text care ================
+
+Sample Input
+5
+1 2 3 4 5
+
+Sample Output
+17
+
+Explanation
+(5-1)xor1 = 5, (5-2)xor2 = 1, (5-3)xor3 = 1, (5-4)xor4 = 5, (5-5)xor5 = 5.
+
+Sample Input
+5
+1 1 0 4 6 
+
+Sample Output
+20
+
+
 code======
 
 
