@@ -1,0 +1,39 @@
+String to long typecast
+
+standard input/output: 2s/128000 kB
+
+Given a String S, you need to typecast this String to Long. If the typecasting is done successfully then we will print "Nice Job" otherwise "Wrong answer".
+Input
+User task:
+Since this is a functional problem you don't have to worry about the input. You just have to complete the function checkConvertion(), which contains S as parameter.
+
+Constraints:-
+1 <= |S| <= 15
+
+The string will contain only numeric digits(1-9)
+Output
+You need to return the typecasted Long value. The driver code will print "Nice Job" otherwise "Wrong answer".
+
+Note:- We are not converting this string to int here because the size of the number exceeds the int limits.
+ExampleSample Input:-
+43
+
+Sample Output:-
+Nice Job
+
+Sample Input:-
+2584563259874
+
+Sample Output:-
+Nice Job
+
+
+code====================
+
+
+
+static long checkConevrtion(String S)
+    {
+      //Enter your code here
+      return Long.parseLong(S);
+    }
