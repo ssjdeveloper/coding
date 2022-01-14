@@ -1,0 +1,36 @@
+Integer Typecast
+
+standard input/output: 2s/128000 kB
+
+Given two integers X and Y, Your task is to first change them into strings and then return the concatenation of these strings.
+Input
+User Task:
+Since this will be a functional problem, you don't have to take input. You just have to complete the function IntegerTypecast() that takes integers X and Y as parameters.
+
+Constraints:-
+1 <= X, Y <= 1000
+Output
+Return the concatenation of strings
+ExampleSample Input:-
+123 345
+
+Sample Output:-
+123345
+
+Sample Input:-
+2 4
+
+Sample Output:-
+24
+
+
+code====================
+
+
+
+static String IntegerTypecast(int a,int b){
+ //Enter your code here
+  String str1=String.valueOf(a);
+  String str2=String.valueOf(b);
+  return str1.concat(str2);
+}
