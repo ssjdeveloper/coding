@@ -1,0 +1,40 @@
+imple Input- String
+
+standard input/output: 2s/128000 kB
+
+Given a string S, your task is to take input of the given string and print the same string.
+Input
+The input contains a single string S.
+Output
+Print the string S.
+ExampleSample Input:-
+NewtonSchool
+
+Sample Output:-
+NewtonSchool
+
+Sample Input:-
+Hello
+
+Sample Output:-
+Hello
+
+
+
+code======================
+
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+		 Scanner inputTaker=new Scanner(System.in);
+		 String str=inputTaker.nextLine();
+		 System.out.println(str);
+	}
+}
