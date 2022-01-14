@@ -12,6 +12,22 @@ Constraints:-
 Output
 Print the maximum value of j- i under the given condition, if no pair satisfies the condition print -1.
 
+text case===============
+
+Sample Input:-
+5
+1 2 3 4 5
+
+Sample Output:-
+4
+
+Sample Input:-
+5
+5 4 3 2 1
+
+Sample Output:-
+-1
+
 
 code============================
 
