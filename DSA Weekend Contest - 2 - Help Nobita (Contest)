@@ -1,0 +1,58 @@
+Help Nobita (Contest)
+
+standard input/output: 2s/128000 kB
+
+While doing homework, Nobita stuck on a problem and asks for your help.
+Problem statement:-
+Given three integers X, Y, and N. Your task is to check if it is possible to form N by using only combinations of X and Y.
+i.e check if there exist any P and Q such that P*X + Q*Y = N
+
+Note:- P and Q can be negative
+Input
+The input contains only three integers X, Y, and N.
+
+Constraints:-
+1 <= X, Y, N <= 100000
+Output
+Print "YES" if it is possible to form N else print "NO".
+Example
+Sample Input:-
+3 5 18
+
+Sample Output:-
+YES
+
+Explanation:-
+1 * 3 + 3 * 5 = 18 (P = 1, Q = 3)
+
+Sample Input:-
+4 8 15
+
+Sample Output:-
+NO
+
+code==============
+
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	long long x,y,n;
+	cin>>x>>y>>n;
+	bool f = true;
+	for(int i = 1;i<=n;i++){
+		long long sum1=n-i*y;
+		long long sum2=n+i*y;
+		if(sum1%x==0 || sum2%x==0){
+			cout<<"YES"<<endl;
+			f=false;
+			break;
+		}
+	}
+	if(f==true){
+		cout<<"NO"<<endl;
+	}
+
+	// Your code here
+	return 0;
+}
