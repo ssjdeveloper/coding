@@ -1,0 +1,53 @@
+Two sets (Contest)
+
+standard input/output: 2s/128000 kB
+
+Consider a sequence of integers from 1 to N (1, 2, 3,. .. . N). Your task is to divide this sequence into two sets such that the absolute difference of the sum of these sets is minimum i.e if we divide the sequence in set A and B then |Sum(A) - Sum(B)| should be minimum.
+Input
+The input contains a single integer N.
+
+Constraints:-
+1 <= N <= 100000
+Output
+Print the minimum absolute difference possible.
+ExampleSample  
+Input:-
+5
+
+Sample Output:-
+1
+
+Explanation:-
+Set A:- 1, 2, 5
+Set B:- 3. 4
+
+Sample Input:-
+8
+
+Sample Output:-
+0
+
+Explanation:-
+Set A:- 1, 2, 3, 5, 7
+Set B;- 4, 6, 8
+
+
+code==================
+
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+    long long n;
+    cin>>n;
+    long long sum = (n*(n+1))/2;
+    if(sum%2==0){
+        cout<<0<<endl;
+    }
+    else{
+        cout<<1<<endl;
+    }
+
+	// Your code here
+	return 0;
+}
