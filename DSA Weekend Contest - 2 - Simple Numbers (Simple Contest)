@@ -1,0 +1,35 @@
+Simple Numbers (Simple Contest)
+
+standard input/output: 2s/128000 kB
+
+You think that integers divisible by K are nice. Given L and R (L<=R), find the number of nice integers from L to R (both inclusive).
+Input
+First Line of input contains three integers L R K
+
+Constraints :
+0 <= L <= R <= 1000000000000000000(10^18)
+1 <= K <= 1000000000000000000(10^18)
+Output
+Output a single integer which is the number of nice integers from L to R (both inclusive).
+Example
+Sample input 1 
+1 10 2
+
+Sample output 1
+5
+
+Sample intput 2
+4 5 3
+
+Sample output 2
+0
+
+Explanation:-
+Required divisors = 2 4 6 8 10
+
+
+code=================================
+
+# Your code here
+l,r,k=[int(x)for x in input().split()]
+print(r//k - (l-1)//k)
